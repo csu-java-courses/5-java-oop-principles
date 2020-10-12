@@ -11,11 +11,19 @@ public class Task02Main {
 
     public static void main(String[] args) {
         Bill bill = new Bill();
+        DiscountBill discountBill = new DiscountBill(10);
         bill.add(ITEM1, 10);
+        discountBill.add(ITEM1, 10);
         bill.add(ITEM3, 3);
+        discountBill.add(ITEM3, 3);
         bill.add(ITEM6, 1);
-        System.out.println(bill);
+        discountBill.add(ITEM6, 1);
         bill.add(ITEM3, 3);
-        System.out.println(bill);
+        discountBill.add(ITEM3, 3);
+        System.out.println(bill+"\n");
+        System.out.println(discountBill+"\n");
+        System.out.println("Разница: "+discountBill.diff()+"\n");
+
+
     }
 }
